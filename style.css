@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .banner {
+    background: url('images/banner.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 50px 0;
+  }
+  
+  .banner-content {
+    max-width: 600px;
+  }
+  
+  .banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .banner-content button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .filmes {
+    padding: 20px 50px;
+    margin-top: -100px;
+  }
+  
+  .filmes-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-top: 10px;
+  }
+  
+  .filmes-container img {
+    height: 180px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .filmes-container img:hover {
+    transform: scale(1.05);
+  }
+  /* Telas menores: celular */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .banner {
+      padding: 100px 20px 0;
+      height: 70vh;
+      text-align: center;
+      background-position: top;
+    }
+  
+    .banner-content h1 {
+      font-size: 2rem;
+    }
+  
+    .banner-content p {
+      font-size: 1rem;
+    }
+  
+    .filmes {
+      padding: 20px;
+    }
+  
+    .filmes-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 8px;
+    }
+  
+    .filmes-container img {
+      height: 140px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banner-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .banner-content p {
+      font-size: 0.9rem;
+    }
+  
+    .banner-content button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
